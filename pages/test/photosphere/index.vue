@@ -2,16 +2,13 @@
 /**
  * Created by PhpStorm.
  * User: Devmc
- * Date: 2021/5/16
- * Time: 22:23w
- *
- * 主页
+ * Date: 2021/6/18
+ * Time: 11:11
  */
 -->
 <template>
-  <div class="page-index">
-
-
+  <div>
+    1
   </div>
 </template>
 
@@ -21,7 +18,7 @@ import {Context} from "@nuxt/types";
 
 export default Vue.extend({
   components: {},
-  asyncData({app, store, route, params, query, env, isDev, isHMR, redirect, error}: Context) {
+  asyncData({app, store, route, params, query, env, isDev, isHMR, redirect, error,}: Context) {
     return {}
   },
   props: {},
@@ -30,13 +27,15 @@ export default Vue.extend({
   },
   head(this: any) {
     return {
-      title: this.$t('title'),
+      title: '',
+      meta: [
+        {hid: '', name: '', content: ''},
+      ]
     };
   },
   created() {
   },
   mounted() {
-    // document.querySelector('html').classList.add('dark');
   },
   methods: {},
   watch: {}

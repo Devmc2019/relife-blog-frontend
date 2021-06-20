@@ -3,8 +3,174 @@
  * User: Devmc
  * Date: 2021/5/16
  * Time: 22:04
+ *
+ * Tailwind 拓展
  */
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/**************************************************
+ * 主题色
+ **************************************************/
+:root {
+  // 深色
+  --theme-color-dark: #1f2937;
+  --theme-color-dark-light: #4b5563;
+  --theme-color-dark-text: #d1d5db;
+  // 主题颜色
+  // 绿色
+  --theme-color-green1: #34d399;
+  --theme-color-green1-light: #ecfdf5;
+  --theme-color-green1-deep: #10b981;
+
+  // 激活的主题颜色
+  --theme-active-color: var(--theme-color-green1);
+  --theme-active-color-light: var(--theme-color-green1-light);
+  --theme-active-color-deep: var(--theme-color-green1-deep);
+}
+
+
+/**************************************************
+ * 基本
+ **************************************************/
+/*@layer utilities {
+  !**
+   * 居中
+   *!
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+
+  .inline-flex-center {
+    @apply inline-flex items-center justify-center;
+  }
+}*/
+
+
+/**************************************************
+ * 主题颜色
+ **************************************************/
+/*@layer utilities {
+  .text-theme-color {
+    color: var(--theme-active-color);
+  }
+
+  .text-theme-color-dark {
+    color: var(--theme-active-color-dark);
+  }
+
+  .bg-theme-color {
+    background-color: var(--theme-active-color);
+  }
+
+  .bg-theme-color-dark {
+    background-color: var(--theme-active-color-dark);
+  }
+
+  .border-theme-color {
+    border-color: var(--theme-active-color);
+  }
+
+  .border-theme-color-dark {
+    border-color: var(--theme-active-color-dark);
+  }
+
+  .bg-theme-dark {
+    background-color: var(--theme-color-dark);
+  }
+
+  .text-theme-dark-text {
+    color: var(--theme-color-dark-text);
+  }
+}*/
+
+/*@variants dark {
+  .bg-theme-dark {
+    background-color: var(--theme-color-dark) #{!important};
+  }
+
+  .text-theme-dark-text {
+    color: var(--theme-color-dark-text) #{!important};
+  }
+}*/
+
+
+/**************************************************
+ * 鼠标
+ **************************************************/
+/*@layer utilities {
+  !**
+   * 默认
+   *!
+  .cur-default {
+    cursor: url(~/assets/icon/cursor/default.png), default !important;
+  }
+
+  .cur-default-inner * {
+    @apply cur-default;
+  }
+
+  .cur-default-all {
+    @apply cur-default;
+    @apply cur-default-inner;
+  }
+
+  !**
+   * 点击
+   *!
+  .cur-pointer {
+    cursor: url(~/assets/icon/cursor/pointer.png), pointer !important;
+  }
+
+  .cur-pointer-inner * {
+    @apply cur-pointer;
+  }
+
+  .cur-pointer-all {
+    @apply cur-pointer;
+    @apply cur-pointer-inner;
+  }
+
+  !**
+   * 光标
+   *!
+  .cur-text {
+    cursor: url(~/assets/icon/cursor/text.png), text !important;
+  }
+
+  .cur-text-inner * {
+    @apply cur-text;
+  }
+
+  .cur-text-all {
+    @apply cur-text;
+    @apply cur-text-inner;
+  }
+}*/
+
+
+/**************************************************
+ * 样式修改
+ **************************************************/
+/**
+ * 元素默认的鼠标样式
+ */
+// 默认
+body,
+html {
+  @apply cur-default #{!important};
+}
+
+// 点击
+a {
+  @apply cur-pointer #{!important};
+}
+
+// 光标
+
+
+/**
+ * 深色模式时，默认的字体颜色
+ */
+.dark * {
+  @apply text-theme-dark-text  ;
+  /*#{!important}*/
+}

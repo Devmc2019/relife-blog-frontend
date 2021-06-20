@@ -13,10 +13,18 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
+  css: [
+    // Tailwind
+    '~/assets/css/tailwind.scss',
+    // 基本样式
+    '~/assets/css/main.scss',
+  ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [
+    '~/plugins/i18n.ts',
+    '~/plugins/web-font/index.ts',
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -42,10 +50,17 @@ export default {
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     manifest: {
-      lang: 'en'
+      lang: 'zh'
     }
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {}
+  build: {
+    vendor: ['vue-i18n']
+  },
+
+  // Root path
+  router: {
+    base: '/'
+  }
 }

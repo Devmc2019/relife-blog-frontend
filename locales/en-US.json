@@ -1,0 +1,10 @@
+{
+  "appName": "RelifeBlog",
+  "navbar": {
+    "blog": "Blog",
+    "essay": "Mood",
+    "friend": "Friend",
+    "archive": "Archive",
+    "about": "Me"
+  }
+}

@@ -3,31 +3,97 @@
  * User: Devmc
  * Date: 2021/5/16
  * Time: 22:11
+ *
+ * 基本布局
  */
 
+/**************************************************
+ * Base
+ **************************************************/
+/**
+ * 设置字体
+ */
 html {
-  font-family: 'Source Sans Pro',
-  -apple-system,
-  BlinkMacSystemFont,
-  'Segoe UI',
-  Roboto,
-  'Helvetica Neue',
-  Arial,
-  sans-serif;
+  font-family: Arial, sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
 
+/**
+ * <html><body>的尺寸，间距
+ */
 html,
 body {
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   margin: 0;
   padding: 0;
 }
 
+/**
+ * 全局使用盒子模型
+ */
 * {
   box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/**
+ * <a>取消下划线、高亮
+ */
+a,
+a:hover,
+a:active,
+a:visited,
+a:link,
+a:focus {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  text-decoration: none;
+  outline: none;
+}
+
+/**
+ * 列表禁止margin
+ */
+ul,
+ol,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/**
+ * Scrollbar
+ */
+@media (min-width: 640px) {
+  ::-webkit-scrollbar {
+    width: .6rem;
+    height: .7rem;
+    border-radius: 1rem;
+  }
+
+  ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 .25rem rgba(0, 0, 0, .2);
+    border-radius: 1rem;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 1rem;
+    background-color: #8a8a8a;
+    // @apply bg-theme-color;
+
+    &:hover {
+      background-color: #949494;
+      // @apply bg-theme-color-deep;
+    }
+  }
 }

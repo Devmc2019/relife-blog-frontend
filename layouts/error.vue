@@ -2,16 +2,16 @@
 /**
  * Created by PhpStorm.
  * User: Devmc
- * Date: 2021/5/16
- * Time: 22:23w
+ * Date: 2021/6/19
+ * Time: 13:21
  *
- * 主页
+ * 错误视图
  */
 -->
 <template>
-  <div class="page-index">
-
-
+  <div class="container">
+    <h1>页面不存在</h1>
+    <nuxt-link to="/">首 页</nuxt-link>
   </div>
 </template>
 
@@ -21,22 +21,27 @@ import {Context} from "@nuxt/types";
 
 export default Vue.extend({
   components: {},
-  asyncData({app, store, route, params, query, env, isDev, isHMR, redirect, error}: Context) {
-    return {}
+  middleware: [
+    "i18n"
+  ],
+  layout: 'template',
+  props: {
+    'error': String
   },
-  props: {},
   data() {
     return {}
   },
   head(this: any) {
     return {
-      title: this.$t('title'),
+      title: '',
+      meta: [
+        {hid: '', name: '', content: ''},
+      ]
     };
   },
   created() {
   },
   mounted() {
-    // document.querySelector('html').classList.add('dark');
   },
   methods: {},
   watch: {}

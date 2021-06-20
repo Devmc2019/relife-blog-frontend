@@ -1,0 +1,17 @@
+{
+  "appName": "RelifeBlog",
+  "slogan": "走进生活，记录生活。",
+  "title": "RelifeBlog - 走进生活，记录生活。",
+  "function": {
+    "home": "主页",
+    "article": "文章",
+    "archives": "归档",
+    "categories": "分类",
+    "tags": "标签",
+    "essay": "随笔",
+    "mine": "我的",
+    "about": "关于",
+    "friends": "友人帐",
+    "more": "更多"
+  }
+}
