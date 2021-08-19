@@ -2,16 +2,12 @@
 /**
  * Created by PhpStorm.
  * User: Devmc
- * Date: 2021/5/16
- * Time: 22:23w
- *
- * 主页
+ * Date: 2021/8/3
+ * Time: 15:01
  */
 -->
 <template>
-  <div class="page-index">
-
-
+  <div class="w-88 bg-pink-200 flex-shrink-0">
   </div>
 </template>
 
@@ -26,17 +22,20 @@ export default Vue.extend({
   },
   props: {},
   data() {
-    return {}
+    return {
+    }
   },
   head(this: any) {
     return {
-      title: this.$t('title'),
+      title: '',
+      meta: [
+        {hid: '', name: '', content: ''},
+      ]
     };
   },
   created() {
   },
   mounted() {
-    // document.querySelector('html').classList.add('dark');
   },
   methods: {},
   watch: {}
@@ -44,5 +43,4 @@ export default Vue.extend({
 </script>
 
 <style lang="scss">
-
 </style>

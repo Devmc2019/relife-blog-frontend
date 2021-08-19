@@ -11,8 +11,10 @@
 <template>
   <div class="min-h-screen
               dark:bg-theme-dark">
+
     <!-- navbar -->
     <navbar/>
+
     <!-- 页面 -->
     <nuxt/>
   </div>

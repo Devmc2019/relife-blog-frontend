@@ -25,7 +25,9 @@ module.exports = {
         // 1px(rem)
         '0.25': '0.0625rem',
         // 3px(rem)
-        '0.75': '0.1875rem'
+        '0.75': '0.1875rem',
+        // 88
+        '88': '22rem'
       },
       // 自定义 z-index
       zIndex: {
@@ -118,13 +120,8 @@ module.exports = {
         },
         '.border-theme-color-deep': {
           'border-color': 'var(--theme-active-color-deep)'
-        }
-      }, ['responsive', 'hover', 'dark']);
-
-      /**
-       * 主题色
-       */
-      addUtilities({
+        },
+        // 深色模式
         '.bg-theme-dark': {
           'background-color': 'var(--theme-color-dark)'
         },
@@ -133,6 +130,13 @@ module.exports = {
         },
         '.text-theme-dark-text': {
           'color': 'var(--theme-color-dark-text)'
+        },
+        // 背景色
+        '.bg-theme-bg': {
+          'background-color': 'var(--theme-bg)'
+        },
+        '.bg-theme-bg-dark': {
+          'background-color': 'var(--theme-bg-dark)'
         }
       }, ['responsive', 'hover', 'dark']);
 

@@ -43,26 +43,26 @@
                           align-middle inline-flex-center"
                    :class="{
                      'active': getActiveNav(item.route, item.child),
-                     'mr-2': !item.child.length
+                     'mr-2': !$libs.hasChild(item)
                    }">
 
           <!-- 图标 -->
           <web-font :src="item.icon" size="20" class="inline-block mr-0.5"></web-font>
 
           <!-- 文字 -->
-          <span class="nav-item__title transform translate-y-0.5 transition-colors duration-200">
+          <span class="nav-item__title tracking-wider transform translate-y-0.5 transition-colors duration-200">
             {{ item.title }}
           </span>
 
           <!-- 下拉箭头 -->
-          <web-font v-if="item.child.length"
+          <web-font v-if="$libs.hasChild(item)"
                     src="navbar-arrow"
                     class="nav-item__arrow h-5 w-3 mr-0.5 transform translate-y-px
                            transition-colors duration-200 fill-current text-gray-600">
           </web-font>
 
           <!-- 下拉菜单 -->
-          <nav v-if="item.child.length"
+          <nav v-if="$libs.hasChild(item)"
                class="nav-dropdown w-28 z-80 py-2.5 text-center rounded border-t-4 border-theme-color
                       bg-white dark:bg-theme-dark absolute left-1/2
                       transition-all duration-300 opacity-0 invisible">
@@ -76,7 +76,7 @@
               <web-font :src="childItem.icon" size="20" class="inline-block"></web-font>
 
               <!-- 文字 -->
-              <span class="transform translate-y-px ml-1 transition-colors duration-200">
+              <span class="transform tracking-wider translate-y-px ml-1 transition-colors duration-200">
                 {{ childItem.title }}
               </span>
             </nuxt-link>
@@ -91,7 +91,7 @@
           <web-font src="navbar-search"></web-font>
         </div>
         <!-- 设置 -->
-        <div class="icon-button">
+        <div class="icon-button" @click="setDark">
           <web-font src="navbar-settings"></web-font>
         </div>
         <!-- 菜单 -->
@@ -100,7 +100,6 @@
         </div>
       </div>
     </div>
-
   </div>
 </template>
 
@@ -212,6 +211,12 @@ export default Vue.extend({
       }
 
       return routeContains || childContains;
+    },
+
+    setDark() {
+      let html: any = document.querySelector('html');
+      if (html.classList.contains('dark')) html.classList.remove('dark')
+      else html.classList.add('dark');
     }
   },
   watch: {}

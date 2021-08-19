@@ -20,7 +20,7 @@ import {Context} from "@nuxt/types";
 
 export default Vue.extend({
   components: {},
-  asyncData({app, store, route, params, query, env, isDev, isHMR, redirect, error,}: Context) {
+  asyncData({app, store, route, params, query, env, isDev, isHMR, redirect, error}: Context) {
     return {}
   },
   props: {},

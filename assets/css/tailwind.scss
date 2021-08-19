@@ -7,21 +7,27 @@
  * Tailwind 拓展
  */
 
+
 /**************************************************
  * 主题色
  **************************************************/
 :root {
+  // 背景色
+  --theme-bg: #F3F3F4; /*#F3F3F4;*/
+  --theme-bg-dark: #374151;
+
   // 深色
   --theme-color-dark: #1f2937;
   --theme-color-dark-light: #4b5563;
   --theme-color-dark-text: #d1d5db;
+
   // 主题颜色
   // 绿色
   --theme-color-green1: #34d399;
-  --theme-color-green1-light: #ecfdf5;
+  --theme-color-green1-light: #d1fae5;
   --theme-color-green1-deep: #10b981;
 
-  // 激活的主题颜色
+  // 使用的主题颜色
   --theme-active-color: var(--theme-color-green1);
   --theme-active-color-light: var(--theme-color-green1-light);
   --theme-active-color-deep: var(--theme-color-green1-deep);
@@ -164,6 +170,7 @@ a {
   @apply cur-pointer #{!important};
 }
 
+
 // 光标
 
 
@@ -171,6 +178,6 @@ a {
  * 深色模式时，默认的字体颜色
  */
 .dark * {
-  @apply text-theme-dark-text  ;
+  @apply text-theme-dark-text;
   /*#{!important}*/
 }
